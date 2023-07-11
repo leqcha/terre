@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "yargs": "^17.7.2"
+  }
+}
