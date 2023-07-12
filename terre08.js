@@ -16,15 +16,29 @@
 // enfin appeler la fonction
 
 const { argv } = require("process");
+const { boolean, number } = require("yargs");
 let userInput = argv.slice(2); // on concatène le tableau en string pour le manipuler
 console.log(userInput);
+const oneArg = userInput != 2;
+const isNumber = userInput()
+// function 
 
-function 
-
-if (userInput.length != 2){ // on vérifie qu'il n'y a qu'un seul argu passé
+if (oneArg){ // on vérifie qu'il n'y a qu'un seul argu passé
     console.log("Il faut entrer deux chiffres");
 }
-else
+// else
+
+// fonction utilisées
+
+// partie 1 gestion d'erreur
+
+// partie 2 parsing
+// prendre les datas de l'user et stocker 
+
+// partie 3 résolution
+
+// partie 4 affichage
+
 
 
 
