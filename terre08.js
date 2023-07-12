@@ -16,28 +16,34 @@
 // enfin appeler la fonction
 
 const { argv } = require("process");
-const { boolean, number } = require("yargs");
-let userInput = argv.slice(2); // on concatène le tableau en string pour le manipuler
-console.log(userInput);
-const oneArg = userInput != 2;
-const isNumber = userInput()
-// function 
 
-if (oneArg){ // on vérifie qu'il n'y a qu'un seul argu passé
-    console.log("Il faut entrer deux chiffres");
-}
-// else
+let userInput = argv.slice(2); // on concatène le tableau en string pour le manipuler
+console.log(userInput[0]);
+console.log(userInput[1]);
+
 
 // fonction utilisées
+function power(number1, number2) {
+    return number1 *= number2;
+}
 
 // partie 1 gestion d'erreur
+if (isNaN(Number(userInput[0])) || isNaN(Number(userInput[1]))){
+    console.log("ce n'est pas un nombre");
+}
+else if (Math.sign(userInput[1]) <= 0){
+    console.log("le deuxième chiffre doit être positif");
+}
+else if (userInput.length != 2){ // on vérifie qu'il n'y a qu'un seul argu passé
+    console.log("Il faut entrer deux chiffres");
+}
+else{
+    userInput.join();
+    let resultat = power(userInput);
+    console.log(resultat);
+}
 
-// partie 2 parsing
-// prendre les datas de l'user et stocker 
 
-// partie 3 résolution
-
-// partie 4 affichage
 
 
 
