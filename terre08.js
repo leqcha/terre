@@ -10,37 +10,36 @@
 
 // pseudo code
 // créer la fonction qui calcule la puissance
-// verifier que les argu passés sont des nombres
+//      verifier que les argu passés sont des nombres
+//      que le 2ème nombre est positif
 //      qu'il n'y a que 2 argu
-// que le 2ème nombre est positif
-// enfin appeler la fonction
+// appeler la fonction
+// afficher le résultat
 
 const { argv } = require("process");
 
-let userInput = argv.slice(2); // on concatène le tableau en string pour le manipuler
-console.log(userInput[0]);
-console.log(userInput[1]);
+let userInput = argv.slice(2);
 
-
-// fonction utilisées
 function power(number1, number2) {
-    return number1 *= number2;
+    let result = number1 ** number2;
+    return result;
 }
 
-// partie 1 gestion d'erreur
 if (isNaN(Number(userInput[0])) || isNaN(Number(userInput[1]))){
-    console.log("ce n'est pas un nombre");
+    console.log("Il ne faut rentrer que des nombres!");
 }
+
 else if (Math.sign(userInput[1]) <= 0){
-    console.log("le deuxième chiffre doit être positif");
+    console.log("le deuxième chiffre doit être positif!");
 }
+
 else if (userInput.length != 2){ // on vérifie qu'il n'y a qu'un seul argu passé
-    console.log("Il faut entrer deux chiffres");
+    console.log("Il ne faut entrer que deux chiffres!");
 }
+
 else{
-    userInput.join();
-    let resultat = power(userInput);
-    console.log(resultat);
+    let result = power(userInput[0], userInput[1]);
+    console.log(result);
 }
 
 
