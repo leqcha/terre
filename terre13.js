@@ -9,3 +9,4 @@
 
 // $> ruby exo.rb 2 2 2
 // erreur.
+
