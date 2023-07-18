@@ -25,5 +25,4 @@ else {
     }
     
     console.log(userStringReverse);
-
 }

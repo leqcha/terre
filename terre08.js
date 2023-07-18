@@ -8,14 +8,6 @@
 
 // Attention : je compte sur vous pour gérer les potentielles erreurs d’arguments.
 
-// pseudo code
-// créer la fonction qui calcule la puissance
-//      verifier que les argu passés sont des nombres
-//      que le 2ème nombre est positif
-//      qu'il n'y a que 2 argu
-// appeler la fonction
-// afficher le résultat
-
 const { argv } = require("process");
 
 let userInput = argv.slice(2);

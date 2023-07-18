@@ -15,15 +15,21 @@
 
 // Attention : gérez aussi les entiers négatifs.
 
-const { argv } = require("process");
-let number = argv.slice(2);
+function evenOrOdd(number) {
+    if ((number % 2) == 0) {
+        console.log("pair");
+    } else if (number % 2 === 1) {
+        console.log("impair");
+    }
+}
 
-if ((number % 2) == 0 ) {
-    console.log("pair");
-}
-else if ((number % 2) == 1){
-    console.log("impair");
-}
-else if(isNaN(number)){
+const { argv } = require("process");
+let number = argv[2];
+
+if (number < 0) { // si le nb est négatif on le converti en positif
+    number = Math.abs(number); 
+} else if (isNaN(number)) {
     console.log("Ce n'est pas un nombre !");
 }
+
+evenOrOdd(number);

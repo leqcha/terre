@@ -16,7 +16,7 @@ let userInput = argv.slice(2);
 
 function primeNumber(number) {
     for (let i = 2; i < number; i++) {  // on initialise à 2 car tous les nombres sont divisibles par 1
-        if (number % i === 0) { // le reste de la division est toujours nulle lorsqu'un nb 1er est divisible 
+        if (number % i === 0) { // le reste de la division est toujours nul lorsqu'un nb 1er est divisible 
             return result = console.log("Non, " + userInput + " n'est pas un nombre premier");
         }
     }

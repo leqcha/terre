@@ -13,15 +13,6 @@
 // $> python exo.py 10
 // erreur.
 
-
-//PSEUDO CODE
-// ----> vérification que l'argument passé n'est pas null, 
-//       n'est pas un chiffre 
-//       qu'il n'y en a qu'un
-
-// ----> écrire une boucle qui passe la taille de l'argu lettre par lettre et stocker la variable dans un compteur
-// ----> afficher le compteur
-
 const { argv } = require("process");
 let userArg = argv.slice(2);
 
